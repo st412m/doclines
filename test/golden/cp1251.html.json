@@ -1,0 +1,17 @@
+{
+  "file": "cp1251.html",
+  "cheapEyes": "0.2.0",
+  "outcome": "text",
+  "format": "html",
+  "encoding": "windows-1251",
+  "lines": [
+    "Фикстура windows-1251",
+    "Срок исполнения контракта — 27 ноября 2026 года.",
+    "Позиция | Кол-во | Сумма",
+    "Компакт-диск | 1 | 1 098,00",
+    "Конец."
+  ],
+  "markers": [],
+  "pageStarts": null,
+  "pagesWithoutText": []
+}

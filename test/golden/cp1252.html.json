@@ -1,0 +1,14 @@
+{
+  "file": "cp1252.html",
+  "cheapEyes": "0.2.0",
+  "outcome": "text",
+  "format": "html",
+  "encoding": "windows-1252",
+  "lines": [
+    "THIS AGREEMENT (this “Agreement”) is made on the 21st day of February 2019.",
+    "Supplier’s margin is seventy-five percent (75%)."
+  ],
+  "markers": [],
+  "pageStarts": null,
+  "pagesWithoutText": []
+}

@@ -1,0 +1,7 @@
+{
+  "file": "text-1904.xlsx",
+  "cheapEyes": "0.2.0",
+  "outcome": "refused",
+  "message": "unsupported format: Excel workbook (.xlsx) — cheap-eyes reads text, HTML, PDF, DOCX, DOC, RTF (text-1904.xlsx)",
+  "reason": "unsupported format: Excel workbook (.xlsx)"
+}

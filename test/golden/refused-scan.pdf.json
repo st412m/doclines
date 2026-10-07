@@ -1,0 +1,7 @@
+{
+  "file": "refused-scan.pdf",
+  "cheapEyes": "0.2.0",
+  "outcome": "refused",
+  "message": "no usable text layer (scanned PDF?): refused-scan.pdf",
+  "reason": "no usable text layer (scanned PDF?)"
+}

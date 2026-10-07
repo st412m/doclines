@@ -1,0 +1,23 @@
+Third-party test files
+----------------------
+The following files in this folder are copies of test files from
+msgreader (https://github.com/HiraokaHyperTools/msgreader), commit
+3a5a9359a0fca87d2ece0d3e44317c876bfdf327, licensed under the Apache
+License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0).
+They are used unchanged, only renamed:
+
+- msg-simple.msg       <- test/Simple.msg
+- msg-attachments.msg  <- test/attachmentsOrder.msg
+- msg-nested.msg       <- test/msgInMsgInMsg.msg
+- msg-ansi.msg         <- test/nonUnicodeMail.msg
+- msg-cjk.msg          <- test/Hello +CJK.msg
+
+The following file in this folder is a copy of a test file from Apache POI
+(https://github.com/apache/poi), commit
+ae62bb5116b9aee19ebd5834e3a82066132c9f7f, licensed under the Apache
+License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0).
+It is used unchanged, only renamed:
+
+- refused-encrypted.ppt <- test-data/slideshow/Password_Protected-hello.ppt
+
+These files are test data only and are not part of the npm package.

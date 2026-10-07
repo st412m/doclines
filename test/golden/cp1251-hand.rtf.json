@@ -1,0 +1,20 @@
+{
+  "file": "cp1251-hand.rtf",
+  "cheapEyes": "0.2.0",
+  "outcome": "text",
+  "format": "rtf",
+  "encoding": null,
+  "lines": [
+    "Инструкция по охране труда (фикстура)",
+    "1.1. К работе допускаются лица не моложе 18 лет.",
+    "Температура: −40 … 105 °C",
+    "English line in a cp1252 font.",
+    "Груз | Высота | Ряды",
+    "Мука | 2 м | 8",
+    "password: Fixture-Not-A-Real-Secret-7",
+    "Конец фикстуры."
+  ],
+  "markers": [],
+  "pageStarts": null,
+  "pagesWithoutText": []
+}

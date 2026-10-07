@@ -1,0 +1,65 @@
+{
+  "name": "doclines",
+  "version": "0.1.0",
+  "description": "Document bytes to numbered lines of text with section markers: PDF, Word, RTF, HTML, spreadsheets, presentations, OpenDocument, EPUB, FB2, email.",
+  "license": "MIT",
+  "author": "st412m",
+  "homepage": "https://github.com/st412m/doclines#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/st412m/doclines.git"
+  },
+  "bugs": "https://github.com/st412m/doclines/issues",
+  "keywords": [
+    "text-extraction",
+    "document",
+    "pdf",
+    "docx",
+    "doc",
+    "rtf",
+    "html",
+    "xlsx",
+    "xls",
+    "ods",
+    "pptx",
+    "ppt",
+    "odp",
+    "odt",
+    "opendocument",
+    "epub",
+    "fb2",
+    "eml",
+    "msg",
+    "outlook"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "doclines": "src/cli.js"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "engines": {
+    "node": ">=22.17"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@kenjiuno/decompressrtf": "0.1.4",
+    "@kenjiuno/msgreader": "1.28.0",
+    "htmlparser2": "^12.0.0",
+    "mammoth": "^1.13.0",
+    "pdfjs-dist": "6.3.289",
+    "postal-mime": "4.0.4",
+    "word-extractor": "1.0.4"
+  }
+}

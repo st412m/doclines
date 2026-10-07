@@ -1,0 +1,7 @@
+{
+  "file": "refused-stub.xps",
+  "cheapEyes": "0.2.0",
+  "outcome": "refused",
+  "message": "unsupported format: ZIP archive — cheap-eyes reads text, HTML, PDF, DOCX, DOC, RTF (refused-stub.xps)",
+  "reason": "unsupported format: ZIP archive"
+}

@@ -1,0 +1,4 @@
+# LF in every checkout, Windows included: tests and tools read these files as text.
+* text=auto eol=lf
+# Format fixtures are compared by content and charset: never convert their bytes.
+test/fixtures/formats/** -text

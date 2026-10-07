@@ -1,0 +1,7 @@
+{
+  "file": "refused-encrypted.pptx",
+  "cheapEyes": "0.2.0",
+  "outcome": "refused",
+  "message": "encrypted document — cheap-eyes cannot read password-protected files (refused-encrypted.pptx)",
+  "reason": "encrypted document"
+}

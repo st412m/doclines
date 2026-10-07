@@ -1,0 +1,7 @@
+{
+  "file": "notes.odt",
+  "cheapEyes": "0.2.0",
+  "outcome": "refused",
+  "message": "unsupported format: OpenDocument text (.odt) — cheap-eyes reads text, HTML, PDF, DOCX, DOC, RTF (notes.odt)",
+  "reason": "unsupported format: OpenDocument text (.odt)"
+}

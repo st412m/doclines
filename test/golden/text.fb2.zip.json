@@ -1,0 +1,7 @@
+{
+  "file": "text.fb2.zip",
+  "cheapEyes": "0.2.0",
+  "outcome": "refused",
+  "message": "unsupported format: ZIP archive — cheap-eyes reads text, HTML, PDF, DOCX, DOC, RTF (text.fb2.zip)",
+  "reason": "unsupported format: ZIP archive"
+}

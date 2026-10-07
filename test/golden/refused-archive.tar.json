@@ -1,0 +1,7 @@
+{
+  "file": "refused-archive.tar",
+  "cheapEyes": "0.2.0",
+  "outcome": "refused",
+  "message": "binary file refused: refused-archive.tar",
+  "reason": null
+}

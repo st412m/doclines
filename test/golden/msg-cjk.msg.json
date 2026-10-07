@@ -1,0 +1,7 @@
+{
+  "file": "msg-cjk.msg",
+  "cheapEyes": "0.2.0",
+  "outcome": "refused",
+  "message": "unsupported format: OLE compound file — cheap-eyes reads text, HTML, PDF, DOCX, DOC, RTF (msg-cjk.msg)",
+  "reason": "unsupported format: OLE compound file"
+}

@@ -1,0 +1,1004 @@
+{
+  "_about": "Synthetic fixtures for doclines format tests. The cheap-eyes 0.2 set (generated 2026-10-02) is kept as is, minus refused.xls/.xlsx/.odt (those formats are supported now). New files generated 2026-10-07 by Claude (chat): LibreOffice 24.2 via UNO from source.html and from a generated spreadsheet/deck (text.odt/docm/dotx, text.xlsx/xlsm/xltx/xls/ods, big-sst.xls, text.pptx/potx/ppt/odp, refused-encrypted.* with password 'test'), python-pptx (deck source), openpyxl (text-1904.xlsx), pandoc 3 from book.md (text.epub, text-epub2.epub, text.fb2, notes.odt), by hand (EML, FB2 cp1251, fb2.zip, EPUB encryption.xml variants, refused-stub.* detection-only stubs, refused-damaged.docx = first half of text.docm, refused-excel95-stub.xls = text.xls with its Workbook stream renamed Book). msg-*.msg: copies of Apache-2.0 test files from HiraokaHyperTools/msgreader; refused-encrypted.ppt: copy of an Apache-2.0 test file from Apache POI (2026-10-07; LibreOffice does not save encrypted PPT); see NOTICE. Assert properties, not byte-equal text. The password value is a fake built for masking tests. Refused entries: `code` is the DoclinesError code; `reason`, kept on the cheap-eyes 0.2 entries only, is a substring of the 0.2 reason.",
+  "text.pdf": {
+    "format": "pdf",
+    "outcome": "text",
+    "pages": 1,
+    "must": [
+      "Fixture: cheap-eyes formats",
+      "Bid security: 1 000 000 PKR",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "планируем",
+      "НМЦК: 3 605 044,00 руб.",
+      "工作温度",
+      "End of fixture.",
+      "−40"
+    ],
+    "must_not": [
+      "­",
+      " ",
+      "Ð",
+      "Ã",
+      "â€"
+    ],
+    "table_row": null,
+    "notes": "PDF tables are not reconstructed; only check that Temperature, −40 and 105 appear. The CJK font is embedded (NotoSerifCJK)."
+  },
+  "text.docx": {
+    "format": "docx",
+    "outcome": "text",
+    "must": [
+      "Fixture: cheap-eyes formats",
+      "Bid security: 1 000 000 PKR",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "планируем",
+      "НМЦК: 3 605 044,00 руб.",
+      "工作温度",
+      "End of fixture."
+    ],
+    "must_not": [
+      "­",
+      " ",
+      "Ð",
+      "Ã",
+      "â€"
+    ],
+    "table_row": "Temperature | −40 | 105"
+  },
+  "text.doc": {
+    "format": "doc",
+    "outcome": "text",
+    "must": [
+      "Fixture: cheap-eyes formats",
+      "Bid security: 1 000 000 PKR",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "планируем",
+      "НМЦК: 3 605 044,00 руб.",
+      "工作温度",
+      "End of fixture."
+    ],
+    "must_not": [
+      "­",
+      " ",
+      "Ð",
+      "Ã",
+      "â€"
+    ],
+    "table_row": "Temperature | −40 | 105"
+  },
+  "lo-export.rtf": {
+    "format": "rtf",
+    "outcome": "text",
+    "must": [
+      "Fixture: cheap-eyes formats",
+      "Bid security: 1 000 000 PKR",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "планируем",
+      "НМЦК: 3 605 044,00 руб.",
+      "工作温度",
+      "End of fixture."
+    ],
+    "must_not": [
+      "­",
+      " ",
+      "Ð",
+      "Ã",
+      "â€",
+      "Liberation",
+      "Times New Roman"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "LibreOffice export: Unicode via \\uN."
+  },
+  "cp1251-hand.rtf": {
+    "format": "rtf",
+    "outcome": "text",
+    "must": [
+      "Инструкция по охране труда (фикстура)",
+      "не моложе 18 лет",
+      "Температура: −40 … 105 °C",
+      "English line in a cp1252 font.",
+      "Конец фикстуры."
+    ],
+    "must_not": [
+      "Hidden info title",
+      "Hidden author",
+      "cheap-eyes fixture",
+      "hidden_bookmark",
+      "Times New Roman",
+      "\\'"
+    ],
+    "table_row": "Мука | 2 м | 8",
+    "notes": "\\ansicpg1251 + \\'xx, \\fcharset204/0 fonts, \\u8722? minus, info/stylesheet/generator/bookmark destinations skipped."
+  },
+  "utf8.html": {
+    "format": "html",
+    "outcome": "text",
+    "must": [
+      "Fixture: cheap-eyes formats",
+      "Bid security: 1 000 000 PKR",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "планируем",
+      "НМЦК: 3 605 044,00 руб.",
+      "工作温度",
+      "End of fixture."
+    ],
+    "must_not": [
+      "­",
+      " ",
+      "Ð",
+      "Ã",
+      "â€"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "&shy; must be dropped, &nbsp; becomes a space."
+  },
+  "cp1251.html": {
+    "format": "html",
+    "outcome": "text",
+    "must": [
+      "Фикстура windows-1251",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "Конец."
+    ],
+    "must_not": [
+      "must not appear",
+      "color:red",
+      " "
+    ],
+    "table_row": "Компакт-диск | 1 | 1 098,00",
+    "notes": "charset only in <meta http-equiv>."
+  },
+  "cp1252.html": {
+    "format": "html",
+    "outcome": "text",
+    "must": [
+      "“Agreement”",
+      "Supplier’s margin",
+      "February 2019"
+    ],
+    "must_not": [
+      "bazadebezolkohpepadr",
+      "Field: Page",
+      "example.invalid",
+      "�"
+    ],
+    "table_row": null,
+    "notes": "Same shape as the SEC EX-10.1 page: windows-1252 quotes 0x93/0x94/0x92, injected script, page comments, noscript pixel."
+  },
+  "refused-scan.pdf": {
+    "format": "pdf",
+    "outcome": "refused",
+    "code": "no_text_layer",
+    "reason": "no usable text layer"
+  },
+  "refused-encrypted.pdf": {
+    "format": "pdf",
+    "outcome": "refused",
+    "code": "encrypted",
+    "reason": "encrypted"
+  },
+  "source.html": {
+    "format": "html",
+    "outcome": "text",
+    "must": [
+      "Fixture: cheap-eyes formats",
+      "Bid security: 1 000 000 PKR",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "планируем",
+      "НМЦК: 3 605 044,00 руб.",
+      "工作温度",
+      "End of fixture."
+    ],
+    "must_not": [
+      "­",
+      " ",
+      "Ð",
+      "Ã",
+      "â€"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "The source all LibreOffice fixtures were made from; same as utf8.html."
+  },
+  "book.md": {
+    "format": "text",
+    "outcome": "text",
+    "must": [
+      "title: \"Фикстура doclines: книга\"",
+      "# Глава первая",
+      "Срок исполнения контракта — 27 ноября 2026 года.[^1]",
+      "| Temperature | −40 | 105 |",
+      "工作温度：−40 ~ 105 °C",
+      "End of fixture."
+    ],
+    "must_not": [
+      "Ð",
+      "--- chapter"
+    ],
+    "notes": "Markdown source of the pandoc fixtures; plain text, read byte-exact (no markers, no table splitting)."
+  },
+  "refused-encrypted.docx": {
+    "format": "docx",
+    "outcome": "refused",
+    "code": "encrypted",
+    "reason": "encrypted",
+    "notes": "Password-protected OOXML: OLE compound file with EncryptionInfo + EncryptedPackage streams, not a ZIP."
+  },
+  "refused-encrypted.doc": {
+    "format": "doc",
+    "outcome": "refused",
+    "code": "encrypted",
+    "reason": "encrypted",
+    "notes": "Word 97-2003 with WordDocument stream, FibBase fEncrypted = 1 (RC4)."
+  },
+  "text.xlsx": {
+    "format": "xlsx",
+    "outcome": "text",
+    "sections": [
+      "sheet",
+      "sheet",
+      "sheet"
+    ],
+    "must": [
+      "--- sheet 1: Данные ---",
+      "[1] Parameter | Min | Max | Date | Note",
+      "[2] Temperature | -40 | 105 | 2026-11-27 | Мука, 2 м",
+      "[3] Voltage | 3 | 3.6 | 2026-02-17 11:00:00 | TRUE",
+      "[5] НМЦК | 3605044 | 7210088 | 11:00:00 | #N/A",
+      "[6] 工作温度 | 0.15 | 2026-09-01 | line one line two | password: Fixture-Not-A-Real-Secret-7",
+      "[7] Merged cell text",
+      "[8] Far | … | Far right",
+      "--- sheet 2: Скрытый (hidden) ---",
+      "[1] Hidden sheet text",
+      "--- sheet 3: Second ---",
+      "[1] Second sheet | -0.5",
+      "[1000] Row one thousand | 36:00:00"
+    ],
+    "must_not": [
+      "46353",
+      "46070",
+      "Ð",
+      "Ã",
+      "â€"
+    ],
+    "table_row": "[2] Temperature | -40 | 105 | 2026-11-27 | Мука, 2 м",
+    "notes": "Row 4 is empty (skipped). B6 is 15% (stored 0.15). E3 =TRUE(), C5 =B5*2, E5 =NA() — cached values. A7:C7 merged. A8 and BZ8 (76 empty columns between). B1000 is 1.5 with format [HH]:MM: elapsed time, shown as a duration 36:00:00 like the ODS time-value PT36H."
+  },
+  "text.xlsm": {
+    "format": "xlsx",
+    "outcome": "text",
+    "sections": [
+      "sheet",
+      "sheet",
+      "sheet"
+    ],
+    "must": [
+      "--- sheet 1: Данные ---",
+      "[1] Parameter | Min | Max | Date | Note",
+      "[2] Temperature | -40 | 105 | 2026-11-27 | Мука, 2 м",
+      "[3] Voltage | 3 | 3.6 | 2026-02-17 11:00:00 | TRUE",
+      "[5] НМЦК | 3605044 | 7210088 | 11:00:00 | #N/A",
+      "[6] 工作温度 | 0.15 | 2026-09-01 | line one line two | password: Fixture-Not-A-Real-Secret-7",
+      "[7] Merged cell text",
+      "[8] Far | … | Far right",
+      "--- sheet 2: Скрытый (hidden) ---",
+      "[1] Hidden sheet text",
+      "--- sheet 3: Second ---",
+      "[1] Second sheet | -0.5",
+      "[1000] Row one thousand | 36:00:00"
+    ],
+    "must_not": [
+      "46353",
+      "46070",
+      "Ð",
+      "Ã",
+      "â€"
+    ],
+    "table_row": "[2] Temperature | -40 | 105 | 2026-11-27 | Мука, 2 м",
+    "notes": "Row 4 is empty (skipped). B6 is 15% (stored 0.15). E3 =TRUE(), C5 =B5*2, E5 =NA() — cached values. A7:C7 merged. A8 and BZ8 (76 empty columns between). B1000 is 1.5 with format [HH]:MM: elapsed time, shown as a duration 36:00:00 like the ODS time-value PT36H."
+  },
+  "text.xltx": {
+    "format": "xlsx",
+    "outcome": "text",
+    "sections": [
+      "sheet",
+      "sheet",
+      "sheet"
+    ],
+    "must": [
+      "--- sheet 1: Данные ---",
+      "[1] Parameter | Min | Max | Date | Note",
+      "[2] Temperature | -40 | 105 | 2026-11-27 | Мука, 2 м",
+      "[3] Voltage | 3 | 3.6 | 2026-02-17 11:00:00 | TRUE",
+      "[5] НМЦК | 3605044 | 7210088 | 11:00:00 | #N/A",
+      "[6] 工作温度 | 0.15 | 2026-09-01 | line one line two | password: Fixture-Not-A-Real-Secret-7",
+      "[7] Merged cell text",
+      "[8] Far | … | Far right",
+      "--- sheet 2: Скрытый (hidden) ---",
+      "[1] Hidden sheet text",
+      "--- sheet 3: Second ---",
+      "[1] Second sheet | -0.5",
+      "[1000] Row one thousand | 36:00:00"
+    ],
+    "must_not": [
+      "46353",
+      "46070",
+      "Ð",
+      "Ã",
+      "â€"
+    ],
+    "table_row": "[2] Temperature | -40 | 105 | 2026-11-27 | Мука, 2 м",
+    "notes": "Row 4 is empty (skipped). B6 is 15% (stored 0.15). E3 =TRUE(), C5 =B5*2, E5 =NA() — cached values. A7:C7 merged. A8 and BZ8 (76 empty columns between). B1000 is 1.5 with format [HH]:MM: elapsed time, shown as a duration 36:00:00 like the ODS time-value PT36H."
+  },
+  "text.xls": {
+    "format": "xls",
+    "outcome": "text",
+    "sections": [
+      "sheet",
+      "sheet",
+      "sheet"
+    ],
+    "must": [
+      "--- sheet 1: Данные ---",
+      "[1] Parameter | Min | Max | Date | Note",
+      "[2] Temperature | -40 | 105 | 2026-11-27 | Мука, 2 м",
+      "[3] Voltage | 3 | 3.6 | 2026-02-17 11:00:00 | TRUE",
+      "[5] НМЦК | 3605044 | 7210088 | 11:00:00 | #N/A",
+      "[6] 工作温度 | 0.15 | 2026-09-01 | line one line two | password: Fixture-Not-A-Real-Secret-7",
+      "[7] Merged cell text",
+      "[8] Far | … | Far right",
+      "--- sheet 2: Скрытый (hidden) ---",
+      "[1] Hidden sheet text",
+      "--- sheet 3: Second ---",
+      "[1] Second sheet | -0.5",
+      "[1000] Row one thousand | 36:00:00"
+    ],
+    "must_not": [
+      "46353",
+      "46070",
+      "Ð",
+      "Ã",
+      "â€"
+    ],
+    "table_row": "[2] Temperature | -40 | 105 | 2026-11-27 | Мука, 2 м",
+    "notes": "Row 4 is empty (skipped). B6 is 15% (stored 0.15). E3 =TRUE(), C5 =B5*2, E5 =NA() — cached values. A7:C7 merged. A8 and BZ8 (76 empty columns between). B1000 is 1.5 with format [HH]:MM: elapsed time, shown as a duration 36:00:00 like the ODS time-value PT36H."
+  },
+  "text.ods": {
+    "format": "ods",
+    "outcome": "text",
+    "sections": [
+      "sheet",
+      "sheet",
+      "sheet"
+    ],
+    "must": [
+      "--- sheet 1: Данные ---",
+      "[1] Parameter | Min | Max | Date | Note",
+      "[2] Temperature | -40 | 105 | 2026-11-27 | Мука, 2 м",
+      "[3] Voltage | 3 | 3.6 | 2026-02-17 11:00:00 | TRUE",
+      "[5] НМЦК | 3605044 | 7210088 | 11:00:00 | #N/A",
+      "[6] 工作温度 | 0.15 | 2026-09-01 | line one line two | password: Fixture-Not-A-Real-Secret-7",
+      "[7] Merged cell text",
+      "[8] Far | … | Far right",
+      "--- sheet 2: Скрытый (hidden) ---",
+      "[1] Hidden sheet text",
+      "--- sheet 3: Second ---",
+      "[1] Second sheet | -0.5",
+      "[1000] Row one thousand | 36:00:00"
+    ],
+    "must_not": [
+      "46353",
+      "46070",
+      "Ð",
+      "Ã",
+      "â€"
+    ],
+    "table_row": "[2] Temperature | -40 | 105 | 2026-11-27 | Мука, 2 м",
+    "notes": "Row 4 is empty (skipped). B6 is 15% (stored 0.15). E3 =TRUE(), C5 =B5*2, E5 =NA() — cached values. A7:C7 merged. A8 and BZ8 (76 empty columns between). B1000 is 1.5 with format [HH]:MM: elapsed time, shown as a duration 36:00:00 like the ODS time-value PT36H."
+  },
+  "text-1904.xlsx": {
+    "format": "xlsx",
+    "outcome": "text",
+    "must": [
+      "[1] Date 1904 | 2026-11-27",
+      "[2] Elapsed | 36:00:00",
+      "[3] Quoted not a date | 46353"
+    ],
+    "must_not": [
+      "2030-",
+      "| 1.5"
+    ],
+    "table_row": null,
+    "notes": "openpyxl: date1904=1, inline strings (t=inlineStr), custom format with a quoted 'day' is not a date."
+  },
+  "big-sst.xls": {
+    "format": "xls",
+    "outcome": "text",
+    "must": [
+      "[1] Latin string number 0000 padded to cross CONTINUE records",
+      "[99] Latin string number 0098 padded to cross CONTINUE records",
+      "[198] Кириллическая строка номер 0197 для границы CONTINUE",
+      "[592] Кириллическая строка номер 0591 для границы CONTINUE",
+      "[600] Кириллическая строка номер 0599 для границы CONTINUE"
+    ],
+    "must_not": [
+      "Ð",
+      "\u0000"
+    ],
+    "table_row": null,
+    "notes": "600 SST strings in SST + 6 Continue records. Strings split across Continue: #98 compressed, #197/#295/#393/#591 16-bit, #492 compressed (0-based SST index; row = index + 1)."
+  },
+  "text.pptx": {
+    "format": "pptx",
+    "outcome": "text",
+    "must": [
+      "--- slide 1 ---",
+      "Fixture: doclines slides",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "工作温度：−40 ~ 105 °C",
+      "--- notes 1 ---",
+      "Speaker notes for slide one",
+      "--- slide 2 ---",
+      "Table slide",
+      "--- slide 3 (hidden) ---",
+      "Hidden slide text",
+      "--- slide 4 ---",
+      "Grouped text box",
+      "password: Fixture-Not-A-Real-Secret-7",
+      "End of fixture.",
+      "--- notes 4 ---",
+      "Notes on the last slide"
+    ],
+    "must_not": [
+      "<number>",
+      "‹#›",
+      "--- notes 2 ---"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "python-pptx source re-saved by LibreOffice. Slide 3 hidden; notes on slides 1 and 4 only; the notes pages carry a slide-number placeholder that must not appear. In PPT the table becomes shapes: no row check. LibreOffice splits '−40' into two runs."
+  },
+  "text.potx": {
+    "format": "pptx",
+    "outcome": "text",
+    "must": [
+      "--- slide 1 ---",
+      "Fixture: doclines slides",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "工作温度：−40 ~ 105 °C",
+      "--- notes 1 ---",
+      "Speaker notes for slide one",
+      "--- slide 2 ---",
+      "Table slide",
+      "--- slide 3 (hidden) ---",
+      "Hidden slide text",
+      "--- slide 4 ---",
+      "Grouped text box",
+      "password: Fixture-Not-A-Real-Secret-7",
+      "End of fixture.",
+      "--- notes 4 ---",
+      "Notes on the last slide"
+    ],
+    "must_not": [
+      "<number>",
+      "‹#›",
+      "--- notes 2 ---"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "python-pptx source re-saved by LibreOffice. Slide 3 hidden; notes on slides 1 and 4 only; the notes pages carry a slide-number placeholder that must not appear. In PPT the table becomes shapes: no row check. LibreOffice splits '−40' into two runs."
+  },
+  "text.ppt": {
+    "format": "ppt",
+    "outcome": "text",
+    "must": [
+      "--- slide 1 ---",
+      "Fixture: doclines slides",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "工作温度：−40 ~ 105 °C",
+      "--- notes 1 ---",
+      "Speaker notes for slide one",
+      "--- slide 2 ---",
+      "Table slide",
+      "--- slide 3 (hidden) ---",
+      "Hidden slide text",
+      "--- slide 4 ---",
+      "Grouped text box",
+      "password: Fixture-Not-A-Real-Secret-7",
+      "End of fixture.",
+      "--- notes 4 ---",
+      "Notes on the last slide",
+      "Temperature",
+      "105"
+    ],
+    "must_not": [
+      "<number>",
+      "‹#›",
+      "--- notes 2 ---"
+    ],
+    "table_row": null,
+    "notes": "python-pptx source re-saved by LibreOffice. Slide 3 hidden; notes on slides 1 and 4 only; the notes pages carry a slide-number placeholder that must not appear. In PPT the table becomes shapes: no row check."
+  },
+  "text.odp": {
+    "format": "odp",
+    "outcome": "text",
+    "must": [
+      "--- slide 1 ---",
+      "Fixture: doclines slides",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "工作温度：−40 ~ 105 °C",
+      "--- notes 1 ---",
+      "Speaker notes for slide one",
+      "--- slide 2 ---",
+      "Table slide",
+      "--- slide 3 (hidden) ---",
+      "Hidden slide text",
+      "--- slide 4 ---",
+      "Grouped text box",
+      "password: Fixture-Not-A-Real-Secret-7",
+      "End of fixture.",
+      "--- notes 4 ---",
+      "Notes on the last slide"
+    ],
+    "must_not": [
+      "<number>",
+      "‹#›",
+      "--- notes 2 ---"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "python-pptx source re-saved by LibreOffice. Slide 3 hidden; notes on slides 1 and 4 only; the notes pages carry a slide-number placeholder that must not appear. In PPT the table becomes shapes: no row check. LibreOffice splits '−40' into two runs."
+  },
+  "text.odt": {
+    "format": "odt",
+    "outcome": "text",
+    "must": [
+      "Fixture: cheap-eyes formats",
+      "Bid security: 1 000 000 PKR",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "планируем",
+      "НМЦК: 3 605 044,00 руб.",
+      "工作温度",
+      "End of fixture."
+    ],
+    "must_not": [
+      "­",
+      " ",
+      "Ð",
+      "Ã",
+      "â€"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "LibreOffice from source.html."
+  },
+  "text.docm": {
+    "format": "docx",
+    "outcome": "text",
+    "must": [
+      "Fixture: cheap-eyes formats",
+      "Bid security: 1 000 000 PKR",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "планируем",
+      "НМЦК: 3 605 044,00 руб.",
+      "工作温度",
+      "End of fixture."
+    ],
+    "must_not": [
+      "­",
+      " ",
+      "Ð",
+      "Ã",
+      "â€"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "LibreOffice from source.html."
+  },
+  "text.dotx": {
+    "format": "docx",
+    "outcome": "text",
+    "must": [
+      "Fixture: cheap-eyes formats",
+      "Bid security: 1 000 000 PKR",
+      "Срок исполнения контракта — 27 ноября 2026 года",
+      "планируем",
+      "НМЦК: 3 605 044,00 руб.",
+      "工作温度",
+      "End of fixture."
+    ],
+    "must_not": [
+      "­",
+      " ",
+      "Ð",
+      "Ã",
+      "â€"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "LibreOffice from source.html."
+  },
+  "notes.odt": {
+    "format": "odt",
+    "outcome": "text",
+    "must": [
+      "Срок исполнения контракта — 27 ноября 2026 года.",
+      "Temperature | −40 | 105",
+      "--- footnotes ---",
+      "Сноска: срок указан в проекте контракта.",
+      "End of fixture."
+    ],
+    "must_not": [
+      "Ð"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "pandoc from book.md: footnote (text:note) and a table."
+  },
+  "text.epub": {
+    "format": "epub",
+    "outcome": "text",
+    "must": [
+      "--- chapter 1: Фикстура doclines: книга ---",
+      "Test Author",
+      "--- chapter 2: Глава первая ---",
+      "Срок исполнения контракта — 27 ноября 2026 года.",
+      "Temperature | −40 | 105",
+      "Сноска: срок указан в проекте контракта.",
+      "--- chapter 3: Chapter Two ---",
+      "工作温度：−40 ~ 105 °C",
+      "End of fixture."
+    ],
+    "must_not": [
+      "Ð"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "EPUB 3 (pandoc). Spine: title page, ch001, ch002; nav.xhtml is not in the spine."
+  },
+  "text-epub2.epub": {
+    "format": "epub",
+    "outcome": "text",
+    "must": [
+      "--- chapter 1: Фикстура doclines: книга ---",
+      "Test Author",
+      "--- chapter 2: Глава первая ---",
+      "Срок исполнения контракта — 27 ноября 2026 года.",
+      "Temperature | −40 | 105",
+      "Сноска: срок указан в проекте контракта.",
+      "--- chapter 3: Chapter Two ---",
+      "工作温度：−40 ~ 105 °C",
+      "End of fixture."
+    ],
+    "must_not": [
+      "Ð"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "EPUB 2 (pandoc). Spine: title page, ch001, ch002; nav.xhtml is not in the spine."
+  },
+  "text-font-obfuscation.epub": {
+    "format": "epub",
+    "outcome": "text",
+    "must": [
+      "--- chapter 1: Фикстура doclines: книга ---",
+      "Test Author",
+      "--- chapter 2: Глава первая ---",
+      "Срок исполнения контракта — 27 ноября 2026 года.",
+      "Temperature | −40 | 105",
+      "Сноска: срок указан в проекте контракта.",
+      "--- chapter 3: Chapter Two ---",
+      "工作温度：−40 ~ 105 °C",
+      "End of fixture."
+    ],
+    "must_not": [
+      "Ð"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "text.epub + META-INF/encryption.xml that only obfuscates a font (idpf embedding): must still be read. Spine: title page, ch001, ch002; nav.xhtml is not in the spine."
+  },
+  "text.fb2": {
+    "format": "fb2",
+    "outcome": "text",
+    "must": [
+      "Фикстура doclines: книга",
+      "Test Author",
+      "--- chapter 1: Глава первая ---",
+      "--- chapter 2: Chapter Two ---",
+      "--- notes ---",
+      "Сноска: срок указан в проекте контракта.",
+      "End of fixture.",
+      "Срок исполнения контракта — 27 ноября 2026 года.",
+      "工作温度：−40 ~ 105 °C"
+    ],
+    "must_not": [
+      "Ð",
+      "<binary"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "pandoc fb2, UTF-8. Title is in body/title; footnotes in body name=notes."
+  },
+  "text-cp1251.fb2": {
+    "format": "fb2",
+    "outcome": "text",
+    "charset": "windows-1251",
+    "must": [
+      "Фикстура doclines: книга",
+      "Test Author",
+      "--- chapter 1: Глава первая ---",
+      "--- chapter 2: Chapter Two ---",
+      "--- notes ---",
+      "Сноска: срок указан в проекте контракта.",
+      "End of fixture.",
+      "Рабочая температура: -40 ~ 105 °C"
+    ],
+    "must_not": [
+      "Ð",
+      "Ã",
+      "Р°Р"
+    ],
+    "table_row": "Temperature | -40 | 105",
+    "notes": "text.fb2 re-encoded windows-1251 (declared in the XML declaration); CJK and U+2212 replaced."
+  },
+  "text.fb2.zip": {
+    "format": "fb2",
+    "outcome": "text",
+    "must": [
+      "Фикстура doclines: книга",
+      "Test Author",
+      "--- chapter 1: Глава первая ---",
+      "--- chapter 2: Chapter Two ---",
+      "--- notes ---",
+      "Сноска: срок указан в проекте контракта.",
+      "End of fixture."
+    ],
+    "must_not": [
+      "Ð"
+    ],
+    "table_row": "Temperature | −40 | 105",
+    "notes": "ZIP holding one book.fb2."
+  },
+  "mail-mixed.eml": {
+    "format": "eml",
+    "outcome": "text",
+    "must": [
+      "Иван Тестов",
+      "ivan@example.com",
+      "To: buyer@example.org",
+      "Cc: audit@example.net",
+      "Date: Tue, 17 Feb 2026 11:00:00 +0300",
+      "Subject: Заявка на поставку — фикстура",
+      "Срок исполнения контракта: 27 ноября 2026 года.",
+      "НМЦК: 3 605 044,00 руб.",
+      "--- attachments ---",
+      "text.docx",
+      "pixel.png",
+      "forwarded.eml",
+      "--- attachment: text.docx ---",
+      "Temperature | −40 | 105",
+      "--- attachment: pixel.png ---",
+      "(not extracted: ",
+      "--- attachment: forwarded.eml ---",
+      "Inner message body text.",
+      "inner.txt"
+    ],
+    "must_not": [
+      "HTML alternative must not be used",
+      "Inner attachment text (depth 2)",
+      "=?utf-8?",
+      "=?windows-1251?"
+    ],
+    "table_row": null,
+    "notes": "From: RFC 2047 UTF-8 B; Subject: RFC 2047 windows-1251 Q; text/plain koi8-r quoted-printable preferred over the HTML alternative; attachments: text.docx (the 0.2 fixture), a 1x1 PNG (refused), message/rfc822 with its own attachment inner.txt. With attachments.depth 1 the inner message body is extracted and inner.txt is listed only; with depth 0 everything is listed only."
+  },
+  "mail-html-only.eml": {
+    "format": "eml",
+    "outcome": "text",
+    "must": [
+      "Subject: Только HTML",
+      "Только HTML-версия письма.",
+      "Мука | 2 м | 8"
+    ],
+    "must_not": [
+      "Ð",
+      "<p>"
+    ],
+    "table_row": "Мука | 2 м | 8",
+    "notes": "Single text/html part, windows-1251, base64; Subject RFC 2047 koi8-r B."
+  },
+  "msg-simple.msg": {
+    "format": "msg",
+    "outcome": "text",
+    "must": [
+      "Subject: Simple",
+      "Simple"
+    ],
+    "must_not": [],
+    "table_row": null,
+    "notes": "Copy of a test file from HiraokaHyperTools/msgreader (Apache-2.0), see NOTICE. Original: test/Simple.msg."
+  },
+  "msg-attachments.msg": {
+    "format": "msg",
+    "outcome": "text",
+    "must": [
+      "Subject: Attachments order",
+      "--- attachments ---",
+      "--- attachment: A.docx ---",
+      "--- attachment: B.docx ---",
+      "--- attachment: C.docx ---",
+      "--- attachment: D.docx ---"
+    ],
+    "must_not": [],
+    "table_row": null,
+    "notes": "Copy of a test file from HiraokaHyperTools/msgreader (Apache-2.0), see NOTICE. Original: test/attachmentsOrder.msg. Four DOCX attachments, each holds one letter A–D; order A, B, C, D."
+  },
+  "msg-nested.msg": {
+    "format": "msg",
+    "outcome": "text",
+    "must": [
+      "Subject: I have sub attachments!",
+      "I have sub attachments!",
+      "--- attachment: I have attachments!",
+      "blue.png",
+      "I have attachments!",
+      "green.png"
+    ],
+    "must_not": [],
+    "table_row": null,
+    "notes": "Copy of a test file from HiraokaHyperTools/msgreader (Apache-2.0), see NOTICE. Original: test/msgInMsgInMsg.msg. Embedded MSG with its own embedded MSG and green.png: with depth 1 the first embedded message is extracted, its attachments only listed."
+  },
+  "msg-ansi.msg": {
+    "format": "msg",
+    "outcome": "text",
+    "must": [
+      "Subject: Non Unicode mail subject",
+      "Non Unicode mail body!",
+      "xmailuser2@xmailserver.test"
+    ],
+    "must_not": [],
+    "table_row": null,
+    "notes": "Copy of a test file from HiraokaHyperTools/msgreader (Apache-2.0), see NOTICE. Original: test/nonUnicodeMail.msg (8-bit string properties)."
+  },
+  "msg-cjk.msg": {
+    "format": "msg",
+    "outcome": "text",
+    "must": [
+      "Subject: Hello +CJK",
+      "你好",
+      "こんにちは",
+      "안녕하세요"
+    ],
+    "must_not": [],
+    "table_row": null,
+    "notes": "Copy of a test file from HiraokaHyperTools/msgreader (Apache-2.0), see NOTICE. Original: test/Hello +CJK.msg."
+  },
+  "refused-encrypted.xls": {
+    "format": "xls",
+    "outcome": "refused",
+    "code": "encrypted",
+    "notes": "LibreOffice, password 'test'."
+  },
+  "refused-encrypted.xlsx": {
+    "format": "xlsx",
+    "outcome": "refused",
+    "code": "encrypted",
+    "notes": "LibreOffice, password 'test'. OOXML with a password is an OLE file with EncryptionInfo + EncryptedPackage."
+  },
+  "refused-encrypted.ods": {
+    "format": "ods",
+    "outcome": "refused",
+    "code": "encrypted",
+    "notes": "LibreOffice, password 'test'."
+  },
+  "refused-encrypted.ppt": {
+    "format": "ppt",
+    "outcome": "refused",
+    "code": "encrypted",
+    "notes": "Copy of Apache POI test-data/slideshow/Password_Protected-hello.ppt (Apache-2.0, see NOTICE): RC4 CryptoAPI, Current User headerToken 0xF3D1C4DF, CryptSession10Container. LibreOffice does not save encrypted PPT."
+  },
+  "refused-encrypted.pptx": {
+    "format": "pptx",
+    "outcome": "refused",
+    "code": "encrypted",
+    "notes": "LibreOffice, password 'test'. OOXML with a password is an OLE file with EncryptionInfo + EncryptedPackage."
+  },
+  "refused-encrypted.odp": {
+    "format": "odp",
+    "outcome": "refused",
+    "code": "encrypted",
+    "notes": "LibreOffice, password 'test'."
+  },
+  "refused-encrypted.odt": {
+    "format": "odt",
+    "outcome": "refused",
+    "code": "encrypted",
+    "notes": "LibreOffice, password 'test'."
+  },
+  "refused-drm.epub": {
+    "format": "epub",
+    "outcome": "refused",
+    "code": "encrypted",
+    "notes": "text.epub + META-INF/encryption.xml listing EPUB/text/ch001.xhtml with aes128-cbc."
+  },
+  "refused-damaged.docx": {
+    "format": "docx",
+    "outcome": "refused",
+    "code": "damaged",
+    "notes": "First half of text.docm: ZIP without central directory, truncated entries."
+  },
+  "refused-image.png": {
+    "format": null,
+    "outcome": "refused",
+    "code": "unsupported",
+    "label_contains": "image (PNG)",
+    "notes": "Detection only."
+  },
+  "refused-archive.zip": {
+    "format": null,
+    "outcome": "refused",
+    "code": "unsupported",
+    "label_contains": "ZIP archive",
+    "notes": "Detection only."
+  },
+  "refused-archive.gz": {
+    "format": null,
+    "outcome": "refused",
+    "code": "unsupported",
+    "label_contains": "gzip",
+    "notes": "Detection only."
+  },
+  "refused-archive.tar": {
+    "format": null,
+    "outcome": "refused",
+    "code": "unsupported",
+    "label_contains": "tar",
+    "notes": "Detection only."
+  },
+  "refused-stub.rar": {
+    "format": null,
+    "outcome": "refused",
+    "code": "unsupported",
+    "label_contains": "RAR",
+    "notes": "Detection only. Stub: only the magic bytes / container layout, not a valid file."
+  },
+  "refused-stub.7z": {
+    "format": null,
+    "outcome": "refused",
+    "code": "unsupported",
+    "label_contains": "7z",
+    "notes": "Detection only. Stub: only the magic bytes / container layout, not a valid file."
+  },
+  "refused-stub.djvu": {
+    "format": null,
+    "outcome": "refused",
+    "code": "unsupported",
+    "label_contains": "DjVu",
+    "notes": "Detection only. Stub: only the magic bytes / container layout, not a valid file."
+  },
+  "refused-db.sqlite": {
+    "format": null,
+    "outcome": "refused",
+    "code": "unsupported",
+    "label_contains": "SQLite database",
+    "notes": "Detection only."
+  },
+  "refused-stub.xlsb": {
+    "format": null,
+    "outcome": "refused",
+    "code": "unsupported",
+    "label_contains": "Excel binary workbook (.xlsb)",
+    "notes": "Detection only. Stub: only the magic bytes / container layout, not a valid file."
+  },
+  "refused-stub.pages": {
+    "format": null,
+    "outcome": "refused",
+    "code": "unsupported",
+    "label_contains": "Apple iWork",
+    "notes": "Detection only. Stub: only the magic bytes / container layout, not a valid file."
+  },
+  "refused-stub.xps": {
+    "format": null,
+    "outcome": "refused",
+    "code": "unsupported",
+    "label_contains": "XPS",
+    "notes": "Detection only. Stub: only the magic bytes / container layout, not a valid file."
+  },
+  "refused-excel95-stub.xls": {
+    "format": null,
+    "outcome": "refused",
+    "code": "unsupported",
+    "label_contains": "Excel workbook older than Excel 97 (.xls)",
+    "notes": "Detection only. Stub: only the magic bytes / container layout, not a valid file."
+  }
+}

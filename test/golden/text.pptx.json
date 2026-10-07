@@ -1,0 +1,7 @@
+{
+  "file": "text.pptx",
+  "cheapEyes": "0.2.0",
+  "outcome": "refused",
+  "message": "unsupported format: PowerPoint presentation (.pptx) — cheap-eyes reads text, HTML, PDF, DOCX, DOC, RTF (text.pptx)",
+  "reason": "unsupported format: PowerPoint presentation (.pptx)"
+}

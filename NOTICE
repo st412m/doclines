@@ -1,0 +1,11 @@
+doclines
+Copyright (c) 2026 st412m
+
+Licensed under the MIT License; see LICENSE.
+
+This package contains no third-party code. Its dependencies are installed from npm
+under their own licences.
+
+The repository's test fixtures include third-party files under the Apache License,
+Version 2.0; they are listed in test/fixtures/NOTICE and are not part of the npm
+package.

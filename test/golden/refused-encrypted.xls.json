@@ -1,0 +1,7 @@
+{
+  "file": "refused-encrypted.xls",
+  "cheapEyes": "0.2.0",
+  "outcome": "refused",
+  "message": "unsupported format: Excel workbook (.xls) — cheap-eyes reads text, HTML, PDF, DOCX, DOC, RTF (refused-encrypted.xls)",
+  "reason": "unsupported format: Excel workbook (.xls)"
+}

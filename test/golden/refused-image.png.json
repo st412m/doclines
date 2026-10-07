@@ -1,0 +1,7 @@
+{
+  "file": "refused-image.png",
+  "cheapEyes": "0.2.0",
+  "outcome": "refused",
+  "message": "binary file refused: refused-image.png",
+  "reason": null
+}

@@ -1,0 +1,23 @@
+{
+  "file": "lo-export.rtf",
+  "cheapEyes": "0.2.0",
+  "outcome": "text",
+  "format": "rtf",
+  "encoding": null,
+  "lines": [
+    "Fixture: cheap-eyes formats",
+    "Bid security: 1 000 000 PKR. Deadline: 2026-02-17 11:00.",
+    "Срок исполнения контракта — 27 ноября 2026 года.",
+    "Мы планируем поставку в срок.",
+    "НМЦК: 3 605 044,00 руб.",
+    "工作温度：−40 ~ 105 °C",
+    "Parameter | Min | Max",
+    "Temperature | −40 | 105",
+    "Voltage | 3.0 | 3.6",
+    "password: Fixture-Not-A-Real-Secret-7",
+    "End of fixture."
+  ],
+  "markers": [],
+  "pageStarts": null,
+  "pagesWithoutText": []
+}
