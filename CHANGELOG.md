@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 — 2026-10-07
+## 0.1.0 — 2026-10-09
 
 - `extract(input, options)`: a file path or bytes → numbered lines, section markers,
   sections, page starts for PDF, warnings, size and SHA-256 of the input.

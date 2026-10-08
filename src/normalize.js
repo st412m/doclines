@@ -87,12 +87,12 @@ export function assemble(sections, { maxTextBytes = Infinity, tooLarge = null } 
 }
 
 // The innermost section of `result` holding 1-based line n, or null: the one starting
-// last, of those the shortest.
+// last, of those the shortest; of equal ranges the inner one (listed later).
 export function sectionOf(result, n) {
   let best = null;
   for (const s of result?.sections ?? []) {
     if (n < s.start || n > s.end) continue;
-    if (!best || s.start > best.start || (s.start === best.start && s.end < best.end)) best = s;
+    if (!best || s.start > best.start || (s.start === best.start && s.end <= best.end)) best = s;
   }
   return best;
 }

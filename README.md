@@ -112,7 +112,7 @@ The result:
 | `charset` | decoded charset for plain text (`utf-8`, `utf-16le`, `utf-16be`, or the `contentType` charset), HTML, FB2 and single-part EML; else `null` |
 | `lines` | the lines, without line breaks; line n is `lines[n - 1]` |
 | `markers` | `[{ at, text }]`: the marker `text` stands before `lines[at]` and is not a line |
-| `sections` | `[{ kind, n, label, start, end }]`; `kind` is one of `page`, `sheet`, `slide`, `notes`, `chapter`, `footnotes`, `endnotes`, `attachments`, `attachment`; `start`/`end` are 1-based line numbers, `end` inclusive (an empty section has `end = start - 1`) |
+| `sections` | `[{ kind, n, label, start, end }]`; `kind` is one of `page`, `sheet`, `slide`, `notes`, `chapter`, `footnotes`, `endnotes`, `attachments`, `attachment`; `start`/`end` are 1-based line numbers, `end` inclusive (an empty section has `end = start - 1`); `label` is the name or title as in the document; the marker shows it cleaned |
 | `pageStarts` | PDF: the first line of each page (1-based); else `null` |
 | `pagesWithoutText` | PDF: pages with no text; else `[]` |
 | `warnings` | strings: parser warnings, collapsed cells, heap cap not in effect |

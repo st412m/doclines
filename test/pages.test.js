@@ -59,6 +59,27 @@ test('sectionOf: the innermost section holding the line', () => {
   assert.equal(sectionOf({ sections: [] }, 1), null);
 });
 
+test('sectionOf: of equal ranges the inner one (listed later); a shorter one at the same start wins', () => {
+  // A one-page PDF attachment: the attachment and its page cover the same lines.
+  const same = {
+    sections: [
+      { kind: 'attachment', n: null, label: 'one.pdf', start: 5, end: 7 },
+      { kind: 'page', n: 1, label: null, start: 5, end: 7 },
+    ],
+  };
+  assert.equal(sectionOf(same, 6).kind, 'page');
+  assert.equal(sectionOf(same, 5).kind, 'page');
+  // The same start, different ends: the page inside, the attachment past its end.
+  const longer = {
+    sections: [
+      { kind: 'attachment', n: null, label: 'one.pdf', start: 5, end: 8 },
+      { kind: 'page', n: 1, label: null, start: 5, end: 7 },
+    ],
+  };
+  assert.equal(sectionOf(longer, 6).kind, 'page');
+  assert.equal(sectionOf(longer, 8).kind, 'attachment');
+});
+
 test('RTF and DOC footnotes: a trailing section after its marker', async () => {
   const rtf = Buffer.from('{\\rtf1\\ansi Body{\\super\\chftn}{\\footnote\\pard\\plain\\chftn Note text.}\\par After\\par}', 'latin1');
   const r = await extract(rtf, { name: 'n.rtf' });
