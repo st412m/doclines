@@ -1,6 +1,6 @@
 {
   "name": "doclines",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Document bytes to numbered lines of text with section markers: PDF, Word, RTF, HTML, spreadsheets, presentations, OpenDocument, EPUB, FB2, email.",
   "license": "MIT",
   "author": "st412m",
@@ -59,7 +59,7 @@
     "htmlparser2": "^12.0.0",
     "mammoth": "^1.13.0",
     "pdfjs-dist": "6.3.289",
-    "postal-mime": "4.0.4",
+    "postal-mime": "4.1.4",
     "word-extractor": "1.0.4"
   }
 }

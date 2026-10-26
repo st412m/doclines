@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.1 — 2026-10-26
+
+- postal-mime 4.0.4 → 4.1.4: fixes GHSA-f2hq-32vh-53cc (quadratic CPU time when
+  decoding a header made of many joinable RFC 2047 base64 encoded words in an EML).
+- EML output changes with the parser fixes of postal-mime 4.0.5–4.1.4: body text
+  that 4.0.4 dropped in some malformed messages is extracted; a `message/rfc822` or
+  `message/delivery-status` attachment keeps the line endings of the message, so its
+  size in the attachment list can differ.
+
 ## 0.1.0 — 2026-10-09
 
 - `extract(input, options)`: a file path or bytes → numbered lines, section markers,

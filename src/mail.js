@@ -76,7 +76,7 @@ const toBuffer = (c) => (Buffer.isBuffer(c) ? c : typeof c === 'string' ? Buffer
 /**
  * The body of a parsed message: its text/plain part, else its HTML through the HTML
  * extractor. postal-mime renders an HTML-only body as text itself; which parts the
- * message has is read from the parser's `textTypes` (internal to postal-mime 4.0.4).
+ * message has is read from the parser's `textTypes` (internal to postal-mime 4.1.4).
  * Without it, the HTML when there is one, else the text.
  */
 export function emlBody(email, parser) {
